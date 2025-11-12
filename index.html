@@ -6,71 +6,106 @@
  initial-scale=1.0">
 
  <style>
-    body {
-        background: linear-gradient(white,rgb(206, 97, 183));
-        height: 100%;
-
-    }
-    .login-box {
-        background: linear-gradient(white,pink);
-        padding: 30px;
-        border-radius: 15px;
-        width: 60%;
-        margin-top: 70px;
-        margin-left: 200px;
-        height: 70%;
-
-    }
-
-    input {
-        width: 50%;
-        padding: 10px;
-        margin-left: 200px ;
-        background: beige;
-    }
-
-    .keypad {
-        display: flexbox; 
-        gap: 10px;
-        margin-left: 150px;
-        margin-top: 20px;
-    }
-
-    button {
-        padding: 15px;
-        border-radius: 10px;
-        width: 30%;
-        border: 5px solid pink;
-        cursor: pointer;
-        font-size: 18px;
-    }
-
-    button:hover {
-        transform: scale(1.1);
-    }
-    .clear, .enter {
-        background-color: rgb(194, 119, 211);
-    }
-
-    #message {
-        margin-top: 10px;
-        font-weight: bold;
-        font-size:50px;
-        text-align: center;
-    }
-
-                .gradient-text {
-  background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-        }
-
-        header{
-            background: white;
-            padding: 5px;
-            
-        }
+      body {
+       background: linear-gradient(white,rgb(206, 97, 183));
+       height: 100%;
+   }
+   .login-box {
+       background: linear-gradient(white,pink);
+       padding: 30px;
+       border-radius: 15px;
+       width: 60%;
+       margin-top: 70px;
+       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+       margin-left: 200px;
+       height: 70%;
+   }
+   input {
+       width: 50%;
+       padding: 10px;
+       background: beige;
+       border: none;
+       border-radius: 8px;
+       font-size: 18px;
+       text-align: center;
+       margin-left: 200px;
+   }
+   .keypad {
+       display: flex; 
+       gap: 10px;
+       margin-top: 20px;
+       justify-content: flex-start;
+       margin-left: 150px;
+       flex-wrap: wrap;
+   }
+   button {
+       padding: 15px;
+       border-radius: 10px;
+       width: 30%;
+       border: 5px solid pink;
+       cursor: pointer;
+       font-size: 18px;
+       background-color: white;
+       transition: transform 0.2s,background 0.3s;
+   }
+   button:hover {
+       transform: scale(1.1);
+       background-color: rgb(255,210,235);
+   }
+   .clear, .enter {
+       background-color: rgb(194, 119, 211);
+       color: white;
+       grid-column: span 1;
+   }
+   #message {
+       margin-top: 15px;
+       font-weight: bold;
+       font-size:24px;
+       text-align: center;
+   }
+               .gradient-text {
+ background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ text-align: center;
+       }
+       header{
+           background: white;
+           padding: 5px;
+           
+       }
+       @media (max-width:600px) {
+           .keypad {
+               margin: 20px 0 auto;
+               justify-content: center;
+           }
+           h1.gradient-text{
+               font-size: 22px;
+           }
+           h2 {
+               font-size: 16px;
+           }
+           .login-box {
+               padding: 20px;
+               width: 90%;
+              margin: 40px auto;
+              height: auto;
+           }
+           button {
+               font-size: 16px;
+               padding: 12px;
+               width: 28%;
+           }
+           input {
+               width: 80%;
+               font-size: 16px;
+               margin: 0 auto;
+               display: block;
+           }
+           #message {
+               font-size: 24px;
+           }
+       }
  </style>
  
  
@@ -155,3 +190,4 @@
  </script>
 </body>
 </html>
+
