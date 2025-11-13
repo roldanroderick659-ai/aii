@@ -6,30 +6,54 @@ content="width=device-width,
 initial-scale=1.0">
     <style>
 
-           body {
+                     body {
       background: linear-gradient(white,rgb(206, 97, 183));
       height: 100vh;
    }
 
                          .gradient-text {
-background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
+background: linear-gradient(to top,rgb(201, 51, 179), rgb(2
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 text-align: center;
       }
     
-    
-    header {
-       background: white;
-       padding: 5px;
-       
-   }
+       header {
+      background: white;
+      padding: 10px;
+      
+  }
+  h1,h5 {
+   margin: 10px 0;
+  }
+
+    .gallery {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   margin-top: 20px;
+  }
+  
+  
+  .gallery img:hover {
+   transform: scale(1.1);
+   box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  }
 
    img {
     border: 5px solid rgb(242, 34, 242);
     border-radius: 10px;
     background-color: white;
     cursor: pointer;
+border-radius: 15px;
+width: 11vw;
+height: auto;
+aspect-ratio: 1 / 1;
+background-color: white;
+object-fit: cover;
+transition: transform 0.3s, box-shadow 0.3s;
+
    
     }
 
@@ -37,6 +61,10 @@ text-align: center;
         transform: scale(1.1);
     }
 
+    @media (max-width:600px) {
+        h1{font-size: 20px;}
+
+    }
    </style>
 
       <header>
@@ -58,3 +86,4 @@ text-align: center;
    </center></div>
 
   </body>
+
