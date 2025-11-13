@@ -7,7 +7,7 @@ initial-scale=1.0">
 
        <style>
 
-           body {
+                     body {
       background: linear-gradient(white,rgb(206, 97, 183));
       height: 100%;
    }
@@ -19,9 +19,22 @@ background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
 text-align: center;
       }
 
+      h2 {
+        margin-top: 5px;
+        color: #444;
+      }
+
+       h1{
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(95,17,81);
+ }
+
+
          header {
       background: white;
       padding: 5px;
+      text-align: center;
       
   }
 
@@ -33,12 +46,12 @@ text-align: center;
     width: 100px;
     height: 70px;
     background-color: rgb(217, 16, 197);
-    margin: 0 auto;
+    margin: 10px auto 0;
     position: relative;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.2;
-    margin-top: 10px;
+    transition: transform 0.3 ease;
+    
   }
 
   .envelope::before {
@@ -52,7 +65,8 @@ text-align: center;
   }
 
    .message {
-    width: 400px;
+    width: 80%;
+    max-width: 400px;
     background: rgb(206, 81, 193);
     color: rgb(0, 0, 0);
     padding: 15px;
@@ -62,9 +76,10 @@ text-align: center;
     rgba(0,0,0,0.2);
     opacity: 0;
     transform: translateY(20px);
-    transition: 3s;
+    transition: opacity 2s ease, transform 2s ease;
     text-align: center;
-    font-family: algerian;
+    font-family: algerian, sefif;
+    line-height: 1.5;
     
    }
 
@@ -74,15 +89,23 @@ text-align: center;
    }
 
    label:hover .envelope {
-    transform: scale(1.05);
+    transform: scale(1.1);
    }
 
       button {
     border: 5px solid rgb(177, 69, 131);
 width: 150px;
 height: 50px;
-   margin-bottom: 50px;
-   margin-left: 1000px;
+   display: block;
+   margin: 40px auto 60px;
+   border-radius: 10px;
+   background: white;
+   font-size: 18px;
+   font-weight: bold;
+   color: rgb(177,69,131);
+   cursor: pointer;
+   transition: transform 0.2s;
+
    }
 
 
@@ -104,6 +127,41 @@ height: 50px;
     margin-top: 15px;
    }
 
+   @media (max-width:600px) {
+    
+    .gradient-text {
+     font-size: 22px;
+    }
+    h2{
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+
+    .envelope {
+      width: 80px;
+      height: 55px;
+    }
+     .envelope::before {
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 28 solid white;
+     }
+
+     .message {
+      width: 90%;
+      font-size: 15px;
+     }
+      
+     button {
+      width: 130px;
+      height: 45px;
+      margin-top: 20px;
+      font-size: 16px;
+     }
+
+   }
 </style>
 
      <header>
@@ -140,3 +198,4 @@ height: 50px;
   
  </body>
  </html>
+
